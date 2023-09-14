@@ -1,0 +1,13 @@
+.content {
+  background-color: #f56565;
+  min-height: 100vh;
+}
+
+.pokemon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  gap: 40px;
+  justify-content: center;
+}
