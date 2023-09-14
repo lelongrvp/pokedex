@@ -20,8 +20,8 @@ import Pokeball from "../img/pokeball.svg";
 import BackButton from "./BackButton";
 
 const PokemonDetail: React.FC = () => {
-  const pokeId: { id: string } = useParams();
-  const { pokemon, isLoading } = useFetchDetail(pokeId.id);
+  const { id } = useParams<{ id?: string }>() ?? { id: "" }; // Use optional chaining and provide a default value
+  const { pokemon, isLoading } = useFetchDetail(id || "");
 
   console.log(pokemon);
 
